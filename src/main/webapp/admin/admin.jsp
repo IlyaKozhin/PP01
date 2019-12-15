@@ -31,7 +31,13 @@
                         .append(id)
                         .append("\"  value=\"")
                         .append(user.getPassword())
-                        .append("\"><button formaction=\"/delete \" formmethod=\"post\" name=\"update\" value=\"del")
+                        .append("\">")
+                        .append("<label>Role</label><input type=\"text\" name=\"role")
+                        .append(id)
+                        .append("\"  value=\"")
+                        .append(user.getRole())
+                        .append("\">\n")
+                        .append("<button formaction=\"/delete \" formmethod=\"post\" name=\"update\" value=\"del")
                         .append(id)
                         .append("\">Delete</button>\n<button formaction=\"/update \" formmethod=\"post\" name=\"update\" value=\"upd")
                         .append(id)
@@ -44,6 +50,7 @@
     <p>
         <label>Name</label><input type="text" name="nameToAdd">
         <label>password</label><input type="password" name="passwordToAdd">
+        <label>role</label><input type="text" name="roleToAdd">
         <button formaction="/add" formmethod="post" name="update" value="addUser">Add User</button>
     </p>
 </form>
